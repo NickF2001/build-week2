@@ -5,11 +5,21 @@ const arrayId = [
     445994175,
     185484062,
     103879,
-    303196427
+    303196427,
+
+    141719812,
+    345675587,
+    112190262,
+    141719812
 ]
 
 arrayId.forEach((el)=> {
     fetch(urlAlbum + el)
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => createAlbum(data))
 })
+
+
+function createAlbum(data){
+    
+}
