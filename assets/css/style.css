@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebarLeft{
+    background-color: black;
+    width: 25vw;
+    height: 100vh;
+}
+
+.sidebarRight{
+    background-color: black;
+    width: 18vw;
+    height: 100vh;
+}
