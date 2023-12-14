@@ -111,9 +111,9 @@ function creareCardBottom(){
 function createAlbum(data){
     let container = document.getElementById('contenitoreBottom')
     let card = document.createElement('div')
-    card.classList.add('col-2', 'mb-4')
+    card.classList.add('col-2', 'mb-4', 'mx-1')
     card.innerHTML = `
-                    <div class="card bg-dark p-2">
+                    <div class="card bg-dark">
                         <a href="./album-page.html?id=${data.id}"><img class="p-3 card-img-top" src="${data.cover}" alt="${data.artist.name}"></a>
                         <div class="card-body text-light">
                           <a href="./album-page.html?id=${data.id}"><h5 class="card-title" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${data.title}</h5></a>
