@@ -52,8 +52,8 @@ function populateAlbumBanner(data) {
 }
 
 function populateAlbumTracklist(el) {
+    let i = 1;
     el.forEach((element)=> {
-
         let myRow = document.createElement('div');
         myRow.classList.add('row');
         let trackRow = document.getElementById('trackRow');
@@ -61,7 +61,7 @@ function populateAlbumTracklist(el) {
         
         <div class="row">
         <div class="col-1">
-        <small id="trackNum"></small>
+        <small id="trackNum">${i}</small>
     </div>
     <div class="col-6">
         <small id="trackTitle">${element.title}</small>
@@ -81,7 +81,7 @@ function populateAlbumTracklist(el) {
         `;
 
         trackRow.appendChild(myRow);
-       
+       i++
     })
 }
 
