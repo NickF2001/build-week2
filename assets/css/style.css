@@ -50,4 +50,18 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+}
+
+#main{
+  overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 100vh;
+}
+#main::-webkit-scrollbar {
+        width: 20px;
+}
+
+a {
+    text-decoration: none;
 }
