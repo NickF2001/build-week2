@@ -1,25 +1,21 @@
 const urlAlbum = 'https://striveschool-api.herokuapp.com/api/deezer/album/'
 
 const arrayId = [
+    363906907,
+    142113722,
+    915785,
+    299821,
+    50980792,
+    10236282,
     75621062,
     443350855,
     445994175,
     185484062,
     103879,
     303196427,
-
-    141719812,
     345675587,
     112190262,
     141719812
-/*
-    'Bellofigo',
-    'Ligabue',
-    'Queen',
-    'Beethoven',
-    'Bustarhymes',
-    'Pulcinopio'
-*/
 ]
 
 
