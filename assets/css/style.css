@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-y: hidden;
 }
 
 
@@ -14,7 +15,30 @@ body{
     background-color: black;
     width: 25vw;
     height: 100vh;
+
 }
+
+.topSideLeft{
+    position: sticky;
+}
+
+.bottomSideLeft p {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.bottomSideLeft{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 60vh;
+   
+}
+
+ .bottomSideLeft::-webkit-scrollbar {
+        width: 20px;
+        }
 
 .sidebarRight{
     background-color: black;
@@ -22,6 +46,17 @@ body{
     height: 100vh;
 }
 
-.nascondi{
-    display: none;
+.topSideRight{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main{
+  overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 100vh;
+}
+#main::-webkit-scrollbar {
+        width: 20px;
 }
