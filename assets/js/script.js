@@ -100,7 +100,7 @@ function creareCardBottom(){
 function createAlbum(data){
     let container = document.getElementById('contenitoreBottom')
     let card = document.createElement('div')
-    card.classList.add('col-2')
+    card.classList.add('col-2', 'mb-4')
     card.innerHTML = `
                     <div class="card bg-dark p-2">
                         <img class="p-3" src="${data.cover}" class="card-img-top" alt="${data.artist.name}">
