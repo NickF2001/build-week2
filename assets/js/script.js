@@ -31,7 +31,7 @@ window.onload = () => {
 }
 
 
-/* ---------------------------------------- HOME PAGE */
+/* ----------------------------------------  HOME PAGE */
 
 function contenitoreTop(){
 
@@ -114,10 +114,10 @@ function createAlbum(data){
     card.classList.add('col-2', 'mb-4')
     card.innerHTML = `
                     <div class="card bg-dark p-2">
-                        <img class="p-3" src="${data.cover}" class="card-img-top" alt="${data.artist.name}">
+                        <a href="./album-page.html?id=${data.id}"><img class="p-3 card-img-top" src="${data.cover}" alt="${data.artist.name}"></a>
                         <div class="card-body text-light">
-                          <h5 class="card-title" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${data.title}</h5>
-                          <p class="card-text" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${data.artist.name}</p>
+                          <a href="./album-page.html?id=${data.id}"><h5 class="card-title" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${data.title}</h5></a>
+                          <a href="artist-page.html?id=${data.artist.id}"><p class="card-text" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${data.artist.name}</p></a>
                         </div>
                       </div>`
 

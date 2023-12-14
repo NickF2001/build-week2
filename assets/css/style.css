@@ -64,4 +64,11 @@ body{
 
 a {
     text-decoration: none;
+    color: white;
+}
+
+#trackRow {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 60vh;
 }
