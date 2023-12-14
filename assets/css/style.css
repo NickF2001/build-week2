@@ -72,3 +72,7 @@ a {
     overflow-x: hidden;
     max-height: 60vh;
 }
+
+#visualizza {
+    font-size: 12px;
+}

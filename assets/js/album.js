@@ -69,7 +69,7 @@ function populateAlbumTracklist(el) {
         <small id="trackArtist">${element.artist.name}</small>
     </div>
     <div class="col-1">
-        <small id="trackReprod">${element.nb_tracks}</small>
+        <small id="trackReprod">${element.id}</small>
     </div>
     <div class="col-1 offset-3">
         <small id="trackTime">${element.duration}
