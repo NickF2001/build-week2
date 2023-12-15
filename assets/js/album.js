@@ -41,7 +41,7 @@ function populateAlbumBanner(data) {
     let tracksNum = document.getElementById('tracksNum');
     let albumTime = document.getElementById('albumTime');
 
-    albumImage.innerHTML = `<img src="${data.cover_medium}" alt="">`;
+    albumImage.innerHTML = `<img class="shadow" src="${data.cover_medium}" alt="">`;
     albumTitle.innerHTML = `${data.title}`;
     artistImage.innerHTML = `<img class="rounded-circle" src="${data.artist.picture_small}" alt="">`;
     artistName.innerHTML = `${data.artist.name}`;
