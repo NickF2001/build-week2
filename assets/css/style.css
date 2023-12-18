@@ -81,29 +81,10 @@ a {
 #arrow{
     cursor: pointer;
 }
-/*
-#artistBanner {
-     z-index: 2; 
-    width: 100%;
-    background: no-repeat;
-    
-}
 
-#artistBanner img {
-    background-repeat: no-repeat;
-    width: 100%; 
-    background-size: 100%;
-}
 
-#bannerArtist {
-    height: 30vh;
-    object-position: center;
-}
-*/
-
-.dinamico{
-
-}
+#hiddenOffcanvas{
+    cursor: pointer;
 
 .player{
     position: absolute;
@@ -114,10 +95,6 @@ a {
     z-index: 2;
 }
 
-.playBarBox{
-
-}
-
 .playerTime {
     font-size: 15px;
 }
@@ -126,10 +103,6 @@ a {
     height: 3px;
     width: 600px;
     background-color: white;
-}
-
-.volumeBox{
-
 }
 
 .volumeBox i{
@@ -165,4 +138,5 @@ background: linear-gradient(0deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.732) 100%);
 #albumGradient {
     background-size: cover;
     background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
 }
