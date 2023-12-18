@@ -85,6 +85,7 @@ a {
 
 #hiddenOffcanvas{
     cursor: pointer;
+}
 
 .player{
     position: absolute;
@@ -138,5 +139,4 @@ background: linear-gradient(0deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.732) 100%);
 #albumGradient {
     background-size: cover;
     background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-
 }
