@@ -237,6 +237,31 @@
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/offcanvas.js"></script>
+
+    <script>
+
+        let title = document.getElementById('buonasera')
+        let data = new Date
+        let h = data.getHours()
+        /* let m = data.getMinutes() */
+
+        function changeHours(){
+            if(h<6){
+                title.innerHTML='Buonanotte'
+            } else if (h<12){
+                title.innerHTML='Buongiorno'
+            } else if (h<18){
+                title.innerHTML='Buon pomeriggio'
+            } else if (h<22){
+                title.innerHTML='Buonasera'
+            } else {
+                title.innerHTML='Buonanotte'
+            }
+        }
+        changeHours()
+
+    </script>
 </body>
 
 </html>
+
