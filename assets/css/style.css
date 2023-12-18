@@ -80,3 +80,7 @@ a {
 #arrow{
     cursor: pointer;
 }
+
+#hiddenOffcanvas{
+    cursor: pointer;
+}
