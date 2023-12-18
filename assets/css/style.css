@@ -57,6 +57,7 @@ body{
   overflow-y: scroll;
     overflow-x: hidden;
     max-height: 100vh;
+    position: relative;
 }
 #main::-webkit-scrollbar, #trackRow::-webkit-scrollbar {
         width: 20px;
@@ -79,4 +80,45 @@ a {
 
 #arrow{
     cursor: pointer;
+}
+
+.dinamico{
+
+}
+
+.player{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    background-color: rgb(29, 29, 29);
+    z-index: 2;
+}
+
+.playBarBox{
+
+}
+
+.playerTime {
+    font-size: 15px;
+}
+
+.playBar{
+    height: 3px;
+    width: 600px;
+    background-color: white;
+}
+
+.volumeBox{
+
+}
+
+.volumeBox i{
+    margin: 0 8px;
+}
+
+.volumeBar {
+    height: 3px;
+    width: 90px;
+    background-color: white;
 }
