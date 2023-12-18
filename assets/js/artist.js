@@ -23,7 +23,7 @@ function getArtistData(id){
 }
 
 function getArtistImage(data) {
-   let banner = document.getElementById('artistBanner');
+   let banner = document.getElementById('totalContainer');
    banner.style.backgroundImage = `url(${data.picture_xl})`
    let artistName = document.getElementById('artistName');
    artistName.innerText = data.name
@@ -49,20 +49,20 @@ function populateArtistTop(el) {
         let trackRow = document.getElementById('top');
         myRow.innerHTML = `
         
-        <div class="row">
-        <div class="col-1">
+        <div class="row d-flex align-items-center mb-2">
+        <div class="col-1 text-end">
         <small id="trackNum">${i}</small>
     </div>
     <div class="col-1">
-        <img src="${element.album.cover_small}" />
+        <img class="top5Images" src="${element.album.cover_small}" />
     </div>
-    <div class="col-5">
+    <div class="col-6">
         <small id="trackTitle">${element.title}</small>
     </div>
     <div class="col-1">
         <small id="trackReprod">${element.id}</small>
     </div>
-    <div class="col-1 offset-3">
+    <div class="col-1 offset-2">
         <small id="trackTime">${element.duration}
         </small>
     </div>
