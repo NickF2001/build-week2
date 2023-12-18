@@ -166,28 +166,6 @@ a {
 
 
 
-@media screen and (max-width: 576px) {
-    .sidebarLeft{
-        display: none;
-    }
-
-    .sidebarRight{
-        display: none;
-    }
-
-    #contenitoreTop{
-        display: none;
-    }
-
-    #buonasera{
-        font-size: 2.5em;
-    }
-
-    #contenitorePlaylist{
-        display: flex;
-        flex-direction: column;
-        max-height:30vh;
-    }
 
 
 #artistRow {
@@ -214,4 +192,28 @@ background: linear-gradient(0deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.732) 100%);
     background-size: cover;
     background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
+}
+
+@media screen and (max-width: 576px) {
+    .sidebarLeft{
+        display: none;
+    }
+
+    .sidebarRight{
+        display: none;
+    }
+
+    #contenitoreTop{
+        display: none;
+    }
+
+    #buonasera{
+        font-size: 2.5em;
+    }
+
+    #contenitorePlaylist{
+        display: flex;
+        flex-direction: column;
+        max-height:30vh;
+    }
 }
