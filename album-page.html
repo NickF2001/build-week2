@@ -28,7 +28,7 @@
                 </a>
                 <br>
                 <i class="bi bi-search fs-3"></i>
-                <small class="fs-6 ms-1 fw-bold">Cerca</small>
+                <input type="text" placeholder="Cerca">
                 <br>
                 <i class="bi bi-collection fs-3"></i> <!-- da cambiare!!!!!!!!! -->
                 <small class="fs-6 ms-1 fw-bold">La tua libreria</small>
@@ -91,7 +91,9 @@
 
 
 
-        <div class="container-fluid" id="albumGradient"><!-- bg-black bg-gradient -->
+
+        <div class="containerCenterMain container-fluid" id="albumGradient"><!-- bg-black bg-gradient -->
+
 <!-- offcanvas che apre la barra laterale a destra con gli amici -->
 
             <div id="inAlto" class="bg-trasparent mt-4 d-flex justify-content-between">
@@ -104,17 +106,17 @@
                     </div>
                 </div>
                 <button class="btn btn-outline-light rounded-pill" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Friends
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" onclick="expandOffcanvasHome()">Friends
                 </button>
 
-                <div class="bg-black offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="bg-black offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" data-bs-backdrop="false" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 350px">
                     <div class="offcanvas-header">
                         <div class="w-100 d-flex justify-content-between align-items-center">
                             <h5 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel">Attività amici</h5>
                             <i class="bi bi-person-add text-light "></i>
                         </div>
-                        <i class="bi bi-x-lg ms-5 text-light" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                        <i class="bi bi-x-lg ms-5 text-light" data-bs-dismiss="offcanvas" aria-label="Close" onclick="hiddenOffcanvasHome()"></i>
                     </div>
                     <div class="offcanvas-body text-light">
                         <div class="border-bottom border-black d-flex justify-content-evenly my-4 pb-2 w-75">
@@ -158,11 +160,12 @@
             </div>
 
 <!-- offcanvas che apre la barra laterale a destra con gli amici -->
-            
-            <div class="row"  style="height: 35vh;">
 
-                <div id="albumImage" class="col-3"></div>
-                <div id="albumBanner" class="col-9 text-light">
+
+            <div class="row" style="height: 36vh;">
+
+                <div id="albumImage" class="col-3 me-3"></div>
+                <div id="albumBanner" class="col-8 text-light">
                     <small>ALBUM</small>
                     <h1 id="albumTitle"></h1>
                     <div class="d-flex align-items-center gap-1">
@@ -179,21 +182,26 @@
 
             </div>
 
-            <div class="row text-light" style="background: rgb(38,38,38);
-            background: linear-gradient(0deg, rgba(38,38,38,1) 33%, rgba(38,38,38,0.2190126050420168) 100%); height: 57vh;">
-                
-                <div class="row">
+            <div id="trackBox" class="row text-light" style="background: rgb(38,38,38);
+            background: linear-gradient(0deg, rgba(38,38,38,1) 33%, rgba(38,38,38,0.2190126050420168) 100%);">
 
-                    <div class="col-12 d-flex align-items-center">
-                        <button class="btn btn-success rounded-circle">
-                            <i class="text-black bi bi-play-fill"></i>
-                        </button>
-                        <i class="bi fs-2 ms-3 bi-heart"></i>
-                        <i class="bi fs-2 ms-3 bi-arrow-down-circle"></i>
-                        <i class="bi fs-2 ms-3 bi-three-dots"></i>
+               <div class="col-12">
+                    <div class="row">
+
+                        <div class="col-12 d-flex align-items-center">
+                            <button class="btn btn-success rounded-circle">
+                                <i class="text-black bi bi-play-fill"></i>
+                            </button>
+                            <i class="bi fs-2 ms-3 bi-heart"></i>
+                            <i class="bi fs-2 ms-3 bi-arrow-down-circle"></i>
+                            <i class="bi fs-2 ms-3 bi-three-dots"></i>
+                        </div>
+
                     </div>
 
-                </div>
+               </div>
+               
+               <div class="col-12">
 
                 <div class="row">
 
@@ -214,6 +222,8 @@
 
                 </div>
 
+               </div>
+
                 <hr>
 
 
@@ -221,10 +231,12 @@
 
 
 
-                <div id="trackRow">
+
+                    <div id="trackRow">
 
 
-                </div>
+                    </div>
+
             </div>
 
 
@@ -235,9 +247,61 @@
 
 
 
-        
+
+
+
+
 
     </div>
+
+
+
+
+    <footer>
+
+        <div class="player row-fluid d-flex justify-content-between text-center">
+
+            <div class="col-3 text-secondary align-items-center fs-3 d-flex" id="dinamico">
+
+                <img id="playerImage"/>
+                <div id="playerDetails">
+                    <div id="playerTitle"></div>
+                    <div id="playerArtist"></div>
+                </div>
+                <i class="bi bi-heart fs-4"></i>
+
+            </div>
+
+            <div class="playBarBox col-6 text-white fs-3 pt-2">
+
+                <i class="bi mx-2 bi-shuffle text-success"></i>
+                <i class="bi mx-2 bi-skip-backward-fill"></i>
+                <i class="bi mx-2 bi-play-circle-fill fs-2"></i>
+                <i class="bi mx-2 bi-skip-forward-fill"></i>
+                <i class="bi mx-2 bi-repeat text-success"></i>
+
+
+                <div class="d-flex justify-content-center">
+                    <div class="playerTime mx-2 text-secondary">0:00</div>
+                    <div class="playBar mt-2"></div>
+                    <div class="playerTime mx-2 text-secondary">0:00</div>
+
+                </div>
+
+
+            </div>
+
+            <div class="volumeBox col-3 text-secondary fs-4 d-flex align-items-center justify-content-end pe-3">
+                <i class="bi bi-list"></i>
+                <i class="bi bi-pip"></i>
+                <i class="bi bi-volume-up"></i>
+                <div class="volumeBar"></div>
+                <i class="bi bi-arrows-fullscreen"></i>
+            </div>
+
+        </div>
+
+    </footer>
 
 
 
@@ -251,6 +315,7 @@
         crossorigin="anonymous"></script>
 
     <script src="assets/js/album.js"></script>
+    <script src="assets/js/offcanvas.js"></script>
 </body>
 
 </html>
