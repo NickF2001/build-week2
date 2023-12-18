@@ -17,11 +17,19 @@ function getArtistData(id){
     .then(response => response.json())
     .then(data => {
          console.log(data);
-        // populateArtistTop(data);
+         getArtistImage(data);
 
     })
 }
 
+function getArtistImage(data) {
+   let banner = document.getElementById('artistBanner');
+   banner.style.backgroundImage = `url(${data.picture_xl})`
+   let artistName = document.getElementById('artistName');
+   artistName.innerText = data.name
+   let ascoltatori = document.getElementById('listener');
+   ascoltatori.innerText = data.nb_fan;
+}
 
 function getTop5(id){
     fetch(urlAlbum + id + "/top?limit=5")

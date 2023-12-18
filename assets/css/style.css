@@ -82,6 +82,16 @@ a {
     cursor: pointer;
 }
 
+#artstiBanner {
+    z-index: 2;
+
+}
+#bannerArtist {
+    height: 30vh;
+    object-position: center;
+    background: no-repeat;
+}
+
 .dinamico{
 
 }
@@ -122,3 +132,4 @@ a {
     width: 90px;
     background-color: white;
 }
+
