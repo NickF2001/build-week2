@@ -80,3 +80,12 @@ a {
 #arrow{
     cursor: pointer;
 }
+#artstiBanner {
+    z-index: 2;
+
+}
+#bannerArtist {
+    height: 30vh;
+    object-position: center;
+    background: no-repeat;
+}
