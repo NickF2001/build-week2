@@ -17,11 +17,19 @@ function getArtistData(id){
     .then(response => response.json())
     .then(data => {
          console.log(data);
-        // populateArtistTop(data);
+         getArtistImage(data);
 
     })
 }
 
+function getArtistImage(data) {
+   let banner = document.getElementById('totalContainer');
+   banner.style.backgroundImage = `url(${data.picture_xl})`
+   let artistName = document.getElementById('artistName');
+   artistName.innerText = data.name
+   let ascoltatori = document.getElementById('listener');
+   ascoltatori.innerText = data.nb_fan;
+}
 
 function getTop5(id){
     fetch(urlAlbum + id + "/top?limit=5")
@@ -41,20 +49,20 @@ function populateArtistTop(el) {
         let trackRow = document.getElementById('top');
         myRow.innerHTML = `
         
-        <div class="row">
-        <div class="col-1">
+        <div class="row d-flex align-items-center mb-2">
+        <div class="col-1 text-end">
         <small id="trackNum">${i}</small>
     </div>
     <div class="col-1">
-        <img src="${element.album.cover_small}" />
+        <img class="top5Images" src="${element.album.cover_small}" />
     </div>
-    <div class="col-5">
+    <div class="col-6">
         <small id="trackTitle">${element.title}</small>
     </div>
     <div class="col-1">
         <small id="trackReprod">${element.id}</small>
     </div>
-    <div class="col-1 offset-3">
+    <div class="col-1 offset-2">
         <small id="trackTime">${element.duration}
         </small>
     </div>
