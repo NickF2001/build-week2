@@ -76,3 +76,7 @@ a {
 #visualizza {
     font-size: 12px;
 }
+
+#arrow{
+    cursor: pointer;
+}
