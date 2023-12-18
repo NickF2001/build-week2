@@ -1,5 +1,7 @@
 const urlAlbum = 'https://striveschool-api.herokuapp.com/api/deezer/album/'
 
+const urlTrack = 'https://striveschool-api.herokuapp.com/api/deezer/track/'
+
 window.onload = () => {
     const getData = new URLSearchParams(location.search);
 
@@ -59,14 +61,14 @@ function populateAlbumTracklist(el) {
         let trackRow = document.getElementById('trackRow');
         myRow.innerHTML = `
         
-        <div class="row">
+        <div class="row d-flex align-items-center" id="tracciaPointer" onclick="populatePlayer(${element.id})">
         <div class="col-1">
         <small id="trackNum">${i}</small>
     </div>
     <div class="col-6">
         <small id="trackTitle">${element.title}</small>
         <br>
-        <small id="trackArtist">${element.artist.name}</small>
+        <small style="font-size:12px" id="trackArtist">${element.artist.name}</small>
     </div>
     <div class="col-1">
         <small id="trackReprod">${element.id}</small>
@@ -83,7 +85,39 @@ function populateAlbumTracklist(el) {
         trackRow.appendChild(myRow);
        i++
     })
+
+    
 }
+
+
+function populatePlayer (element) {
+    fetch(urlTrack + element)
+    .then(response => response.json())
+    .then(data => {console.log(data)
+    
+     let image = document.getElementById("playerImage");
+    let title = document.getElementById("playerTitle");
+    let artist = document.getElementById("playerArtist");
+
+    image.setAttribute("src", `${data.album.cover_small}`);
+    title.innerHTML = `${data.title}`;
+    artist.innerHTML = `${data.artist.name}`;
+
+    title.classList.add("titleFont");
+    artist.classList.add("artistFont");
+    image.classList.add("imageFont");
+    
+    
+    })
+
+    console.log(element)
+    
+
+   
+}
+
+
+
 
 
 

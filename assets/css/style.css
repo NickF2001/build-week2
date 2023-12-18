@@ -8,7 +8,9 @@ body{
 
 .main{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+    height: 100vh;
+
 }
 
 .sidebarLeft{
@@ -16,6 +18,11 @@ body{
     width: 25vw;
     height: 100vh;
 
+
+}
+
+#tracciaPointer {
+    cursor: pointer;
 }
 
 .topSideLeft{
@@ -53,6 +60,10 @@ body{
 
 }
 
+#mainDiv {
+    height: 100vh;
+}
+
 #main{
   overflow-y: scroll;
     overflow-x: hidden;
@@ -72,6 +83,7 @@ a {
     overflow-y: scroll;
     overflow-x: hidden;
     max-height: 60vh;
+
 }
 
 #visualizza {
@@ -133,3 +145,67 @@ a {
     background-color: white;
 }
 
+.trackBox {
+
+    margin-bottom: 100px;
+}
+
+#trackBox{
+    min-height:20vh;
+    max-height:60vh;
+}
+
+.artistFont {
+    font-size: 16px;
+    margin: 0 15px;
+    color: gray;
+}
+.titleFont {
+    font-size: 16px;
+    margin: 0 15px;
+    color: white;
+}
+.imageFont{
+    margin-left: 15px;
+}
+
+.player i {
+    cursor: pointer;
+}
+
+.sidebarLeft i {
+    cursor: pointer;
+}
+
+.sidebarLeft input{
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .sidebarLeft{
+        display: none;
+    }
+
+    .sidebarRight{
+        display: none;
+    }
+
+    #contenitoreTop{
+        display: none;
+    }
+
+    #buonasera{
+        font-size: 2.5em;
+    }
+
+    #contenitorePlaylist{
+        display: flex;
+        flex-direction: column;
+        max-height:30vh;
+    }
+
+}
