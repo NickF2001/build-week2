@@ -58,7 +58,7 @@ body{
     overflow-x: hidden;
     max-height: 100vh;
 }
-#main::-webkit-scrollbar {
+#main::-webkit-scrollbar, #trackRow::-webkit-scrollbar {
         width: 20px;
 }
 
@@ -75,4 +75,8 @@ a {
 
 #visualizza {
     font-size: 12px;
+}
+
+#arrow{
+    cursor: pointer;
 }

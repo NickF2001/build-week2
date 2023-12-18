@@ -30,27 +30,39 @@ function contenitoreTop(){
 
     fetch(urlAlbum + arrayId[numCasual])
     .then(response => response.json())
-    .then(data => {createAlbumTop(data)})
+    .then(data => {
+      console.log(data.tracks.data);
+      createAlbumTop(data.tracks.data)
+    })
     
 }
 function createAlbumTop(data){
+    let numCasualDellArray = Math.floor(Math.random()*data.length)
+    console.log(numCasualDellArray);
+
     let container = document.getElementById('contenitoreTop')
     let card = document.createElement('div')
     card.classList.add('col', 'border', 'border-0')
     card.innerHTML = `
     <div class="card mb-3 bg-dark p-2 w-100 border border-0" style="background: rgb(0,0,0);
     background: linear-gradient(9deg, rgba(0,0,0,1) 9%, rgba(38,38,38,0) 100%);">
-    <div class="row g-0">
+    <div class="row g-0 w-100">
       <div class="col-3">
-        <img class="p-2 img-fluid" src="${data.cover}" class="card-img-top" alt="${data.artist.name}" style="width:190px; height:190px;">
+        <img class="p-2 img-fluid" src="${data[numCasualDellArray].album.cover_medium}" class="card-img-top" alt="${data[numCasualDellArray].artist.name}" style="width:100%; height:100%;">
       </div>
       <div class="col-md-8">
         <div class="card-body text-light">
-          <h5 class="card-title">${data.title}</h5>
-          <p class="card-text"><small>${data.artist.name}</small></p>
-          <div>
-            <a href="#" class="btn btn-success text-black rounded-pill btn-lg me-2">Play</a>
+          <div class="d-flex justify-content-between mb-3">
+            <small class="">ALBUM</small>
+            <small class="btn btn-sm btn-dark text-secondary ">NASCONDI ANNUNCI</small>
+          </div>
+          <h3 class="card-title">${data[numCasualDellArray].title}</h3>
+          <p class="card-text"><small>${data[numCasualDellArray].artist.name}</small></p>
+          <p class="card-text">Ascolta il nuovo singolo di ${data[numCasualDellArray].artist.name}</p>
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="btn btn-success text-black rounded-pill btn-lg">Play</a>
             <a href="#" class="btn btn-outline-light rounded-pill btn-lg">Save</a>
+            <i class="bi fs-2 bi-three-dots"></i>
           </div>
         </div>
       </div>
@@ -76,14 +88,16 @@ function createAlbumPlaylist(data){
     card.innerHTML = `
     <div class="card mb-3 bg-dark" style="max-width: 540px;">
     <div class="row g-0">
-      <div class="col-4">
-        <img class="img-fluid" src="${data.cover}" class="card-img-top" alt="${data.artist.name}">
-      </div>
-      <div class="col-6">
-        <div class="card-body h-100 d-flex align-items-center">
-          <h5 class="card-title text-light" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${data.title}</h5>
+      <a class="row g-0" href="./album-page.html?id=${data.id}">
+        <div class="col-4">
+          <img class="img-fluid" src="${data.cover}" class="card-img-top" alt="${data.artist.name}">
         </div>
-      </div>
+        <div class="col-6">
+          <div class="card-body h-100 d-flex align-items-center">
+            <h5 class="card-title text-light" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${data.title}</h5>
+          </div>
+        </div>
+      </a>
     </div>
   </div>`
 

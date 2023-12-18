@@ -88,7 +88,75 @@
 
 
 
-        <div class="container">
+        <div class="container bg-black bg-gradient text-light">
+
+<!-- offcanvas che apre la barra laterale a destra con gli amici -->
+
+<div id="inAlto" class="bg-trasparent mt-4 d-flex justify-content-between">
+    <div id="arrow" class="d-flex text-light gap-3">
+        <a href="index.html"><div class="rounded-circle d-flex align-items-center justify-content-center opacity-100" style="background-color: rgba(0, 0, 0, 0.316); width: 29px; height: 29px;">
+            <i class="bi bi-chevron-left"></i>
+        </div></a>
+        <div class="rounded-circle d-flex align-items-center justify-content-center opacity-50" style="background-color: rgba(0, 0, 0, 0.316); width: 29px; height: 29px;">
+            <i class="bi bi-chevron-right"></i>
+        </div>
+    </div>
+    <button class="btn btn-outline-light rounded-pill" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Friends
+    </button>
+
+    <div class="bg-black offcanvas offcanvas-end" data-bs-scroll="true" tabindex="0" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 350px;">
+        <div class="offcanvas-header">
+            <div class="w-100 d-flex justify-content-between align-items-center">
+                <h5 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel">Attività amici</h5>
+                <i class="bi bi-person-add text-light "></i>
+            </div>
+            <i class="bi bi-x-lg ms-5 text-light" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+        </div>
+        <div class="offcanvas-body text-light">
+            <div class="border-bottom border-black d-flex justify-content-evenly my-4 pb-2 w-100">
+                <img class="rounded-circle" src="assets/imgs/user2.jpeg" alt="" style="width: 40px; height: 40px;">
+                <div>
+                    <h6 class="mb-1">Charlie Hookham</h6>
+                    <small class="mb-1">In Camera • Yumi Zouma</small>
+                    <div class="d-flex gap-1 mb-1">
+                        <i class="bi bi-vinyl text-light"></i>
+                        <small>EP III</small>
+                    </div>
+                </div>
+                <small>4 ore</small>
+            </div>
+            <div class="border-bottom border-black d-flex justify-content-evenly my-4 pb-2 w-100">
+                <img class="rounded-circle" src="assets/imgs/user2.jpeg" alt="" style="width: 40px; height: 40px;">
+                <div>
+                    <h6 class="mb-1">Charlie Hookham</h6>
+                    <small class="mb-1">In Camera • Yumi Zouma</small>
+                    <div class="d-flex gap-1 mb-1">
+                        <i class="bi bi-vinyl text-light"></i>
+                        <small>Aimed to Kill</small>
+                    </div>
+                </div>
+                <small>4 ore</small>
+            </div>
+            <div class="border-bottom border-black d-flex justify-content-evenly my-4 pb-2 w-100">
+                <img class="rounded-circle" src="assets/imgs/user2.jpeg" alt="" style="width: 40px; height: 40px;">
+                <div>
+                    <h6 class="mb-1">Charlie Hookham</h6>
+                    <small class="mb-1">In Camera • Yumi Zouma</small>
+                    <div class="d-flex gap-1 mb-1">
+                        <i class="bi bi-music-note-beamed"></i>
+                        <small>Twint Badass mood</small>
+                    </div>
+                </div>
+                <small>4 ore</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- offcanvas che apre la barra laterale a destra con gli amici -->
+
             <div class="row">
                 
                 
@@ -109,7 +177,7 @@
                     <button class="btn btn-success rounded-circle">
                         <i class="text-black bi bi-play-fill"></i>
                     </button>
-                    <button type="button" class="btn btn-outline-dark">FOLLOWING</button>
+                    <button type="button" class="btn btn-outline-light">FOLLOWING</button>
                     <i class="bi fs-2 ms-3 bi-three-dots"></i>
                 </div>
 
@@ -125,7 +193,9 @@
                 <h3>Popolari</h3>
                 <div id="top"></div>
             </div>
-            <div id="like" class="col-5"></div>
+            <div id="like" class="col-5">
+                <h3>Brani che ti piacciono</h3>
+            </div>
 
             
         </div>
@@ -136,17 +206,7 @@
 
 
 
-        <div class="sidebarRight">
-            <div class="topSideRight text-secondary mt-2">
-                <div>
-                    <small class="fw-bold fs-5 text-light">Attività amici</small>
-                </div>
-                <div>
-                    <i class="bi bi-person-add fs-4"></i>
-                    <i class="bi bi-x fs-3"></i>
-                </div>
-            </div>
-        </div>
+        
 
     </div>
 
