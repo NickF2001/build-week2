@@ -63,15 +63,18 @@ function populateAlbumTracklist(el) {
         let trackRow = document.getElementById('trackRow');
         myRow.innerHTML = `
         
-        
-        <div class="row d-flex align-items-center" id="tracciaPointer" onclick="populatePlayer(${element.id})">
+
+        <div class="row d-flex align-items-center fw-bold" id="tracciaPointer" onclick="populatePlayer(${element.id})">
+
         <div class="col-1">
         <small class="text-secondary" id="trackNum">${i}</small>
     </div>
     <div class="col-6">
         <small id="trackTitle">${element.title}</small>
         <br>
+
         <small style="font-size:12px;" class="fw-bold text-secondary" id="trackArtist">${element.artist.name}</small>
+
     </div>
     <div class="col-1">
         <small class="text-secondary" id="trackReprod">${element.id}</small>
@@ -91,7 +94,6 @@ function populateAlbumTracklist(el) {
 
     
 }
-
 
 function populatePlayer (element) {
     fetch(urlTrack + element)
@@ -118,68 +120,3 @@ function populatePlayer (element) {
 
    
 }
-
-
-
-
-
-
-
-// <div id="trackRow" class="row">
-
-// <div class="col-1">
-//     <small id="trackNum">1</small>
-// </div>
-// <div class="col-6">
-//     <small id="trackTitle">kkjdjahdkajdhsdf</small>
-//     <br>
-//     <small id="trackArtist">affwfwf</small>
-// </div>
-// <div class="col-1">
-//     <small id="trackReprod">3225252</small>
-// </div>
-// <div class="col-1 offset-3">
-//     <small id="trackTime">
-//         1:24
-//     </small>
-// </div>
-
-// </div>
-
-
-
-// <div id="albumImage" class="col-3"></div>
-// <div id="albumBanner" class="col-9">
-//     <small>ALBUM</small>
-//     <h1 id="albumTitle"></h1>
-//    <div class="d-flex">
-//         <div class="rounded-circle" id="artistImage"></div>
-//         <small id="artistName"></small>
-//         <small id="albumYear"></small>
-//         <small id="tracksNum"></small>
-//         <small id="albumTime" class="text-secondary"></small>
-//    </div>
-// </div>
-
-
-
-// <div class="row">
-
-// <div class="col-1">
-//     <small>1</small>
-// </div>
-// <div class="col-6">
-//     <small>kkjdjahdkajdhsdf</small>
-//     <br>
-//     <small>affwfwf</small>
-// </div>
-// <div class="col-1">
-//     <small>3225252</small>
-// </div>
-// <div class="col-1 offset-3">
-//     <small>
-//         1:24
-//     </small>
-// </div>
-
-// </div>

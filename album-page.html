@@ -92,7 +92,8 @@
 
 
 
-        <div class="container-fluid" id="albumGradient"><!-- bg-black bg-gradient -->
+
+        <div class="containerCenterMain container-fluid" id="albumGradient"><!-- bg-black bg-gradient -->
 
 <!-- offcanvas che apre la barra laterale a destra con gli amici -->
 
@@ -106,17 +107,17 @@
                     </div>
                 </div>
                 <button class="btn btn-outline-light rounded-pill" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Friends
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" onclick="expandOffcanvasHome()">Friends
                 </button>
 
-                <div class="bg-black offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="bg-black offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" data-bs-backdrop="false" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 350px">
                     <div class="offcanvas-header">
                         <div class="w-100 d-flex justify-content-between align-items-center">
                             <h5 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel">Attività amici</h5>
                             <i class="bi bi-person-add text-light "></i>
                         </div>
-                        <i class="bi bi-x-lg ms-5 text-light" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                        <i class="bi bi-x-lg ms-5 text-light" data-bs-dismiss="offcanvas" aria-label="Close" onclick="hiddenOffcanvasHome()"></i>
                     </div>
                     <div class="offcanvas-body text-light">
                         <div class="border-bottom border-black d-flex justify-content-evenly my-4 pb-2 w-75">
@@ -162,15 +163,17 @@
 <!-- offcanvas che apre la barra laterale a destra con gli amici -->
 
 
-            <div class="row bg-danger" style="height: 36vh;">
+
+            <div class="row" style="height: 36vh;">
+
 
                 <div id="albumImage" class="col-3 me-3"></div>
                 <div id="albumBanner" class="col-8 text-light">
                     <small>ALBUM</small>
                     <h1 id="albumTitle"></h1>
                     <div class="d-flex align-items-center gap-1">
-                        <div id="artistImage"></div>
-                        <small id="artistName"></small>
+                        <a href="#"><div id="artistImage"></div></a>
+                        <a href="#"><small id="artistName"></small></a>
                         <small class="mx-1">•</small>
                         <small id="albumYear"></small>
                         <small class="mx-1">•</small>
@@ -192,9 +195,9 @@
                             <button class="btn btn-success rounded-circle">
                                 <i class="text-black bi bi-play-fill"></i>
                             </button>
-                            <i class="bi fs-2 ms-3 bi-heart"></i>
-                            <i class="bi fs-2 ms-3 bi-arrow-down-circle"></i>
-                            <i class="bi fs-2 ms-3 bi-three-dots"></i>
+                            <a href="#"><i class="bi fs-2 ms-3 bi-heart"></i></a>
+                            <a href="#"><i class="bi fs-2 ms-3 bi-arrow-down-circle"></i></a>
+                            <a href="#"><i class="bi fs-2 ms-3 bi-three-dots"></i></a>
                         </div>
 
                     </div>
@@ -203,7 +206,7 @@
                
                <div class="col-12">
 
-                <div class="row">
+                <div class="row text-secondary fw-bold">
 
                     <div class="col-1">
                         <small class="text-secondary">#</small>
@@ -315,6 +318,7 @@
         crossorigin="anonymous"></script>
 
     <script src="assets/js/album.js"></script>
+    <script src="assets/js/offcanvas.js"></script>
 </body>
 
 </html>

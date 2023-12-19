@@ -89,7 +89,7 @@
 
       <!-- main -->
 
-      <div class="container-fluid text-light p-0 m-0" id="totalContainer">
+      <div class="containerCenterMain container-fluid text-light p-0 m-0" id="totalContainer">
         <!-- offcanvas che apre la barra laterale a destra con gli amici -->
 
         <div id="inAlto" class="pt-4 d-flex justify-content-between px-4">
@@ -116,14 +116,8 @@
               <i class="bi bi-chevron-right"></i>
             </div>
           </div>
-          <button
-            class="btn btn-outline-light rounded-pill"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasWithBothOptions"
-            aria-controls="offcanvasWithBothOptions"
-          >
-            Friends
+          <button class="btn btn-outline-light rounded-pill" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" onclick="expandOffcanvasHome()">Friends
           </button>
 
           <div
@@ -132,6 +126,7 @@
             tabindex="0"
             id="offcanvasWithBothOptions"
             aria-labelledby="offcanvasWithBothOptionsLabel"
+            data-bs-backdrop="false"
             style="width: 350px"
           >
             <div class="offcanvas-header">
@@ -144,7 +139,7 @@
                 >
                   Attività amici
                 </h5>
-                <i class="bi bi-person-add text-light"></i>
+                <i onclick="hiddenOffcanvasHome()" class="bi bi-person-add text-light"></i>
               </div>
               <i
                 class="bi bi-x-lg ms-5 text-light"
@@ -222,7 +217,7 @@
               ><i class="bi bi-patch-check-fill text-primary me-1"></i>Artista
               verificato</small
             >
-            <h1 id="artistName" class="fw-bold display-3"></h1>
+            <a href="#"><h1 id="artistName" class="fw-bold display-3"></h1></a>
             <div class="d-flex">
               <small id="listener"></small>
               <small class="ps-1">ascoltatori mensili</small>
@@ -239,25 +234,32 @@
               <button type="button" class="btn btn-outline-light">
                 FOLLOWING
               </button>
-              <i class="bi fs-2 bi-three-dots"></i>
+              <a href="#"><i class="bi fs-2 bi-three-dots"></i></a>
+              
             </div>
             <div class="d-flex row h-100">
               <div id="popolari" class="col-7">
                 <h4 class="my-4">Popolari</h4>
                 <div id="top"></div>
-                <small class="fw-bold">
+                <a href="#">
+                  <small class="fw-bold text-secondary">
                     VISUALIZZA ALTRO
                 </small>
+                </a>
+                
               </div>
               <div id="like" class="col-5">
                 <h4 class="my-4">Brani che ti piacciono</h4>
-                <div class="row">
+                <div class="row" id="myLiked">
+                  <!--
                     <div class="col">
                         <img src="" alt="" class="img-fluid">
                     </div>
                     <div class="col">
                         <p class="fw-bold"></p>
                     </div>
+                  -->
+                    
                 </div>
               </div>
             </div>
@@ -333,5 +335,6 @@
 
 
     <script src="assets/js/artist.js"></script>
+    <script src="assets/js/offcanvas.js"></script>
   </body>
 </html>

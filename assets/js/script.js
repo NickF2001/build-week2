@@ -57,7 +57,7 @@ function createAlbumTop(data){
             <small class="btn btn-sm btn-dark text-secondary ">NASCONDI ANNUNCI</small>
           </div>
           <h3 class="card-title">${data[numCasualDellArray].title}</h3>
-          <p class="card-text"><small>${data[numCasualDellArray].artist.name}</small></p>
+          <a href="artist-page.html?id=${data[numCasualDellArray].artist.id}"><p class="card-text"><small>${data[numCasualDellArray].artist.name}</small></p></a>
           <p class="card-text">Ascolta il nuovo singolo di ${data[numCasualDellArray].artist.name}</p>
           <div class="d-flex align-items-center gap-3">
             <a href="#" class="btn btn-success text-black rounded-pill btn-lg">Play</a>
