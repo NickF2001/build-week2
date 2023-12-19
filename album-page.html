@@ -93,7 +93,10 @@
 
 
 
-        <div class="containerCenterMain container-fluid" id="albumGradient"><!-- bg-black bg-gradient -->
+        <div class="containerCenterMain container-fluid"><!-- bg-black bg-gradient -->
+            
+<div id="albumGradient"></div>
+
 
 <!-- offcanvas che apre la barra laterale a destra con gli amici -->
 
@@ -164,10 +167,9 @@
 
 
 
-            <div class="row" style="height: 36vh;">
+            <div class="row d-flex align-items-center" id="greyGradient" style="height: 36vh;">
 
-
-                <div id="albumImage" class="col-3 me-3"></div>
+    <div id="albumImage" class="col-3 me-3"></div>
                 <div id="albumBanner" class="col-8 text-light">
                     <small>ALBUM</small>
                     <h1 id="albumTitle"></h1>
@@ -183,12 +185,14 @@
                     </div>
                 </div>
 
-            </div>
+
+</div>
+                
 
             <div id="trackBox" class="row text-light" style="background: rgb(38,38,38);
             background: linear-gradient(0deg, rgba(38,38,38,1) 33%, rgba(38,38,38,0.2190126050420168) 100%);">
 
-               <div class="col-12">
+               <div class="col-12 py-3">
                     <div class="row">
 
                         <div class="col-12 d-flex align-items-center">
@@ -206,20 +210,20 @@
                
                <div class="col-12">
 
-                <div class="row text-secondary fw-bold">
+                <div class="row text-light fw-bold">
 
-                    <div class="col-1">
-                        <small class="text-secondary">#</small>
+                    <div class="col-1 text-end">
+                        <small class="text-light">#</small>
                     </div>
-                    <div class="col-1">
-                        <small class="text-secondary">TITOLO</small>
+                    <div class="col-6">
+                        <small class="text-light">TITOLO</small>
                     </div>
-                    <div class="col-1 offset-5">
-                        <small class="text-secondary">RIPRODUZIONI</small>
+                    <div class="col-3">
+                        <small class="text-light">RIPRODUZIONI</small>
                     </div>
-                    <div class="col-1 offset-3">
+                    <div class="col-2">
                         <small>
-                            <i class="text-secondary bi bi-clock"></i>
+                            <i class="text-light bi bi-clock"></i>
                         </small>
                     </div>
 

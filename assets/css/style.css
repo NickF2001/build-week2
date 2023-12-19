@@ -9,16 +9,13 @@ body{
 .main{
     display: flex;
     justify-content: space-between; 
-    height: 100vh;
-
+    height: calc(100vh - 100px);
 }
 
 .sidebarLeft{
     background-color: black;
     width: 25vw;
     height: 100vh;
-
-
 }
 
 #tracciaPointer {
@@ -77,10 +74,8 @@ a {
 }
 
 #trackRow {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    max-height: 60vh;
-
+    height: calc(38vh - 100px);
+    overflow: auto;
 }
 
 #visualizza {
@@ -130,14 +125,13 @@ a {
 
     margin-bottom: 100px;
 }
-
+/*
 #trackBox{
+    height: calc(53vh - 100px);
+    overflow: auto;
 
-    min-height:20vh;
-
-    max-height:60vh;
 }
-
+*/
 .artistFont {
     font-size: 16px;
     margin: 0 15px;
@@ -166,15 +160,6 @@ a {
     color: white;
 }
 
-
-
-
-
-  
-
-
-
-
 #artistRow {
     /* opacity: 0.9; */
     background: rgb(0,0,0);
@@ -195,10 +180,18 @@ background: linear-gradient(0deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.732) 100%);
     height: 40px;
 }
 
-#albumGradient{
+
+#albumGradient {
+    position: absolute;
+    width: 75vw;
+    height: 100vh;
     background-size: cover;
-    /* background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
-    
+    filter: blur(85px) saturate(200%) brightness(100%);
+    z-index: -1;
+}
+
+#greyGradient {
+    background-color: rgba(62, 62, 62, 0.636);
 }
 
 @media screen and (max-width: 576px) {
