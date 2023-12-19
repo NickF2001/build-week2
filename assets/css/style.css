@@ -8,7 +8,9 @@ body{
 
 .main{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+    height: 100vh;
+
 }
 
 .sidebarLeft{
@@ -16,6 +18,11 @@ body{
     width: 25vw;
     height: 100vh;
 
+
+}
+
+#tracciaPointer {
+    cursor: pointer;
 }
 
 .topSideLeft{
@@ -53,14 +60,15 @@ body{
 
 }
 
-#main{
+
+#main, #totalContainer{
   overflow-y: scroll;
     overflow-x: hidden;
     max-height: 100vh;
     position: relative;
 }
-#main::-webkit-scrollbar, #trackRow::-webkit-scrollbar {
-        width: 20px;
+#main::-webkit-scrollbar, #trackRow::-webkit-scrollbar, #totalContainer::-webkit-scrollbar {
+        width: 0px;
 }
 
 a {
@@ -72,6 +80,7 @@ a {
     overflow-y: scroll;
     overflow-x: hidden;
     max-height: 60vh;
+
 }
 
 #visualizza {
@@ -82,18 +91,9 @@ a {
     cursor: pointer;
 }
 
-#artstiBanner {
-    z-index: 2;
 
-}
-#bannerArtist {
-    height: 30vh;
-    object-position: center;
-    background: no-repeat;
-}
-
-.dinamico{
-
+#hiddenOffcanvas{
+    cursor: pointer;
 }
 
 .player{
@@ -103,10 +103,6 @@ a {
     bottom: 0;
     background-color: rgb(29, 29, 29);
     z-index: 2;
-}
-
-.playBarBox{
-
 }
 
 .playerTime {
@@ -119,10 +115,6 @@ a {
     background-color: white;
 }
 
-.volumeBox{
-
-}
-
 .volumeBox i{
     margin: 0 8px;
 }
@@ -133,3 +125,95 @@ a {
     background-color: white;
 }
 
+
+.trackBox {
+
+    margin-bottom: 100px;
+}
+
+#trackBox{
+    min-height:20vh;
+    max-height:60vh;
+}
+
+.artistFont {
+    font-size: 16px;
+    margin: 0 15px;
+    color: gray;
+}
+.titleFont {
+    font-size: 16px;
+    margin: 0 15px;
+    color: white;
+}
+.imageFont{
+    margin-left: 15px;
+}
+
+.player i {
+    cursor: pointer;
+}
+
+.sidebarLeft i {
+    cursor: pointer;
+}
+
+.sidebarLeft input{
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+
+
+
+
+#artistRow {
+    /* opacity: 0.9; */
+    background: rgb(0,0,0);
+background: linear-gradient(0deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.732) 100%);
+}
+
+#totalContainer {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bannerArtist {
+    height: 35vh;
+}
+
+.top5Images {
+    width: 40px;
+    height: 40px;
+}
+
+#albumGradient {
+    background-size: cover;
+    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+}
+
+@media screen and (max-width: 576px) {
+    .sidebarLeft{
+        display: none;
+    }
+
+    .sidebarRight{
+        display: none;
+    }
+
+    #contenitoreTop{
+        display: none;
+    }
+
+    #buonasera{
+        font-size: 2.5em;
+    }
+
+    #contenitorePlaylist{
+        display: flex;
+        flex-direction: column;
+        max-height:30vh;
+    }
+}
