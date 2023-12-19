@@ -105,8 +105,9 @@ a {
 }
 
 .playBar{
-    height: 3px;
+    height: 5px;
     width: 600px;
+    border-radius: 25px;
     background-color: white;
 }
 
@@ -115,8 +116,9 @@ a {
 }
 
 .volumeBar {
-    height: 3px;
+    height: 4px;
     width: 90px;
+    border-radius: 25px;
     background-color: white;
 }
 
@@ -195,15 +197,7 @@ background: linear-gradient(0deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.732) 100%);
 }
 
 @media screen and (max-width: 576px) {
-    .sidebarLeft{
-        display: none;
-    }
-
-    .sidebarRight{
-        display: none;
-    }
-
-    #contenitoreTop{
+    .sidebarLeft, .sidebarRight, #contenitoreTop, .playBarBox .text-success, .playBar, .playerTime{
         display: none;
     }
 
@@ -220,5 +214,21 @@ background: linear-gradient(0deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.732) 100%);
     .player{
         position: absolute;
         bottom: 0;
+        height: 125px;
+    }
+
+    .titleFont{
+        font-size: 13px;
+    }
+
+    .artistFont{
+        font-size: 8px;
+    }
+
+    #mobileMenu{
+        position: absolute;
+        bottom:0;
+
+        padding-top: 100px;
     }
 }

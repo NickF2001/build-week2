@@ -1,5 +1,7 @@
 const urlAlbum = "https://striveschool-api.herokuapp.com/api/deezer/artist/";
 
+const urlTrack = 'https://striveschool-api.herokuapp.com/api/deezer/track/';
+
 window.onload = () => {
   const getData = new URLSearchParams(location.search);
 
@@ -45,7 +47,7 @@ function populateArtistTop(el) {
     let trackRow = document.getElementById("top");
     myRow.innerHTML = `
         
-        <div class="row d-flex align-items-center mb-2">
+        <div class="row d-flex align-items-center mb-2" onclick="populatePlayer(${element.id})">
         <div class="col-1 text-end">
         <small id="trackNum">${i}</small>
     </div>
@@ -74,7 +76,7 @@ function populateArtistTop(el) {
 function getLikedTracks(el) {
   let liked = document.getElementById("myLiked");
   liked.innerHTML = `
-    <div class="row d-flex align-items-center">
+    <div class="row d-none d-sm-flex align-items-center">
     <div class="col-2">
     <a href="#"><img class="top5Images rounded-circle" src="${el.picture_small}" /></a>
     </div>
@@ -84,4 +86,28 @@ function getLikedTracks(el) {
     </div>
         </div>
     `;
+}
+
+
+function populatePlayer (element) {
+    fetch(urlTrack + element)
+    .then(response => response.json())
+    .then(data => {console.log(data)
+    
+     let image = document.getElementById("playerImage");
+    let title = document.getElementById("playerTitle");
+    let artist = document.getElementById("playerArtist");
+
+    image.setAttribute("src", `${data.album.cover_small}`);
+    title.innerHTML = `${data.title}`;
+    artist.innerHTML = `${data.artist.name}`;
+
+    title.classList.add("titleFont");
+    artist.classList.add("artistFont");
+    image.classList.add("imageFont");
+    
+    
+    })
+
+    console.log(element)
 }
