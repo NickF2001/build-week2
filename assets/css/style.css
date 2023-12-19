@@ -132,7 +132,9 @@ a {
 }
 
 #trackBox{
+
     min-height:20vh;
+
     max-height:60vh;
 }
 

@@ -1,9 +1,16 @@
-let main = document.getElementById('main')
+/* let main = document.getElementById('main') */
+let footerPlayer = document.querySelector('.player')
 
-function expandOffcanvas(){
-    main.style.marginRight = '380px'
+let main = document.querySelector('.containerCenterMain')
+
+function expandOffcanvasHome(){
+    main.style.marginRight = '345px';
+    console.log(footerPlayer);
+    console.log(main);
+    footerPlayer.style.width = 'calc(100% - 350px);'
 }
 
-function hiddenOffcanvas(){
-    main.style.marginRight = '0px'
+function hiddenOffcanvasHome(){
+    main.style.marginRight = '0px';
+    footerPlayer.style.width = '100%'
 }
