@@ -208,4 +208,12 @@ a {
         max-height:30vh;
     }
 
+    .player{
+        position: sticky;
+        bottom: 0;
+    }
+
+    .player i {
+        display: no;
+    }
 }

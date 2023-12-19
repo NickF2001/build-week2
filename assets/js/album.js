@@ -45,8 +45,8 @@ function populateAlbumBanner(data) {
 
     albumImage.innerHTML = `<img class="shadow" src="${data.cover_medium}" alt="">`;
     albumTitle.innerHTML = `${data.title}`;
-    artistImage.innerHTML = `<img class="rounded-circle" src="${data.artist.picture_small}" alt="">`;
-    artistName.innerHTML = `${data.artist.name}`;
+    artistImage.innerHTML = `<a href="artist-page.html?id=${data.artist.id}"><img class="rounded-circle" src="${data.artist.picture_small}" alt=""></a>`;
+    artistName.innerHTML = `<a href="artist-page.html?id=${data.artist.id}">${data.artist.name}</a>`;
     albumYear.innerHTML = `${data.release_date}`;
     tracksNum.innerHTML = `${data.nb_tracks}`;
     albumTime.innerHTML = `${data.duration}`;
@@ -61,20 +61,21 @@ function populateAlbumTracklist(el) {
         let trackRow = document.getElementById('trackRow');
         myRow.innerHTML = `
         
+        
         <div class="row d-flex align-items-center" id="tracciaPointer" onclick="populatePlayer(${element.id})">
         <div class="col-1">
-        <small id="trackNum">${i}</small>
+        <small class="text-secondary" id="trackNum">${i}</small>
     </div>
     <div class="col-6">
         <small id="trackTitle">${element.title}</small>
         <br>
-        <small style="font-size:12px" id="trackArtist">${element.artist.name}</small>
+        <small style="font-size:12px;" class="fw-bold text-secondary" id="trackArtist">${element.artist.name}</small>
     </div>
     <div class="col-1">
-        <small id="trackReprod">${element.id}</small>
+        <small class="text-secondary" id="trackReprod">${element.id}</small>
     </div>
     <div class="col-1 offset-3">
-        <small id="trackTime">${element.duration}
+        <small class="text-secondary" id="trackTime">${element.duration}
         </small>
     </div>
         </div>
