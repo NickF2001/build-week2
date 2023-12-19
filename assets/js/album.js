@@ -63,20 +63,20 @@ function populateAlbumTracklist(el) {
         let trackRow = document.getElementById('trackRow');
         myRow.innerHTML = `
         
-        <div class="row d-flex align-items-center" id="tracciaPointer" onclick="populatePlayer(${element.id})">
+        <div class="row d-flex align-items-center fw-bold" id="tracciaPointer" onclick="populatePlayer(${element.id})">
         <div class="col-1">
-        <small id="trackNum">${i}</small>
+        <small class="text-secondary" id="trackNum">${i}</small>
     </div>
     <div class="col-6">
         <small id="trackTitle">${element.title}</small>
         <br>
-        <small style="font-size:12px" id="trackArtist">${element.artist.name}</small>
+        <small class="text-secondary" style="font-size:12px" id="trackArtist">${element.artist.name}</small>
     </div>
     <div class="col-1">
-        <small id="trackReprod">${element.id}</small>
+        <small class="text-secondary" id="trackReprod">${element.id}</small>
     </div>
     <div class="col-1 offset-3">
-        <small id="trackTime">${element.duration}
+        <small class="text-secondary" id="trackTime">${element.duration}
         </small>
     </div>
         </div>
@@ -90,7 +90,6 @@ function populateAlbumTracklist(el) {
 
     
 }
-
 
 function populatePlayer (element) {
     fetch(urlTrack + element)
