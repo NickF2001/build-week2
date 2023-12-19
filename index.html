@@ -87,7 +87,7 @@
         </div>
 
 
-        <div id="main" class="container-fluid bg-black bg-gradient">
+        <div id="main" class="containerCenterMain container-fluid bg-black bg-gradient">
 
             <!-- offcanvas che apre la barra laterale a destra con gli amici -->
 
@@ -101,17 +101,17 @@
                     </div>
                 </div>
                 <button class="btn btn-outline-light rounded-pill" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" onclick="expandOffcanvas()">Friends
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" onclick="expandOffcanvasHome()">Friends
                 </button>
 
                 <div class="bg-black offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="0" id="offcanvasWithBothOptions"
-                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 350px">
                     <div class="offcanvas-header">
                         <div class="w-100 d-flex justify-content-between align-items-center">
                             <h5 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel">Attività amici</h5>
                             <i class="bi bi-person-add text-light "></i>
                         </div>
-                        <i id="hiddenOffcanvas" class="bi bi-x-lg ms-5 text-light" data-bs-dismiss="offcanvas" aria-label="Close" onclick="hiddenOffcanvas()"></i>
+                        <i id="hiddenOffcanvas" class="bi bi-x-lg ms-5 text-light" data-bs-dismiss="offcanvas" aria-label="Close" onclick="hiddenOffcanvasHome()"></i>
                     </div>
                     <div class="offcanvas-body text-light">
                         <div class="border-bottom border-black d-flex justify-content-evenly my-4 pb-2 w-75">
@@ -154,7 +154,7 @@
                 </div>
             </div>
 
-        <!-- offcanvas che apre la barra laterale a destra con gli amici -->
+            <!-- offcanvas che apre la barra laterale a destra con gli amici -->
 
             <div class="py-5">
                 <div class="row" id="contenitoreTop"></div>
@@ -215,11 +215,11 @@
         </div>
 
         <div class="volumeBox col-3 text-secondary fs-4 d-flex align-items-center justify-content-end pe-3">
-            <i class="bi bi-list"></i>
-            <i class="bi bi-pip"></i>
-            <i class="bi bi-volume-up"></i>
-            <div class="volumeBar"></div>
-            <i class="bi bi-arrows-fullscreen"></i>
+            <i class="bi d-none d-sm-block bi-list"></i>
+            <i class="bi d-none d-sm-block bi-pip"></i>
+            <i class="bi d-none d-sm-block bi-volume-up"></i>
+            <div class="volumeBar d-none d-sm-block"></div>
+            <i class="bi d-none d-sm-block bi-arrows-fullscreen"></i>
         </div>
 
     </div>
@@ -237,6 +237,31 @@
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/offcanvas.js"></script>
+
+    <script>
+
+        let title = document.getElementById('buonasera')
+        let data = new Date
+        let h = data.getHours()
+        /* let m = data.getMinutes() */
+
+        function changeHours(){
+            if(h<6){
+                title.innerHTML='Buonanotte'
+            } else if (h<12){
+                title.innerHTML='Buongiorno'
+            } else if (h<18){
+                title.innerHTML='Buon pomeriggio'
+            } else if (h<22){
+                title.innerHTML='Buonasera'
+            } else {
+                title.innerHTML='Buonanotte'
+            }
+        }
+        changeHours()
+
+    </script>
 </body>
 
 </html>
+

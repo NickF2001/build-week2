@@ -57,7 +57,7 @@ function createAlbumTop(data){
             <small class="btn btn-sm btn-dark text-secondary ">NASCONDI ANNUNCI</small>
           </div>
           <h3 class="card-title">${data[numCasualDellArray].title}</h3>
-          <p class="card-text"><small>${data[numCasualDellArray].artist.name}</small></p>
+          <a href="artist-page.html?id=${data[numCasualDellArray].artist.id}"><p class="card-text"><small>${data[numCasualDellArray].artist.name}</small></p></a>
           <p class="card-text">Ascolta il nuovo singolo di ${data[numCasualDellArray].artist.name}</p>
           <div class="d-flex align-items-center gap-3">
             <a href="#" class="btn btn-success text-black rounded-pill btn-lg">Play</a>
@@ -84,15 +84,15 @@ function contenitorePlaylist(){
 function createAlbumPlaylist(data){
     let container = document.getElementById('contenitorePlaylist')
     let card = document.createElement('div')
-    card.classList.add('col-4')
+    card.classList.add('col-12', 'col-sm-4')
     card.innerHTML = `
     <div class="card mb-3 bg-dark" style="max-width: 540px;">
     <div class="row g-0">
       <a class="row g-0" href="./album-page.html?id=${data.id}">
-        <div class="col-3 col-sm-4">
+        <div class="col-4">
           <img class="img-fluid" src="${data.cover}" class="card-img-top" alt="${data.artist.name}">
         </div>
-        <div class="col-3 col-sm-6">
+        <div class="col-6">
           <div class="card-body h-100 d-flex align-items-center">
             <h5 class="card-title text-light" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${data.title}</h5>
           </div>
@@ -116,7 +116,7 @@ function creareCardBottom(){
 function createAlbum(data){
     let container = document.getElementById('contenitoreBottom')
     let card = document.createElement('div')
-    card.classList.add('col-2', 'mb-4', 'mx-1')
+    card.classList.add('col-12', 'col-sm-2', 'mb-4', 'mx-1')
     card.innerHTML = `
                     <div class="card bg-dark">
                         <a href="./album-page.html?id=${data.id}"><img class="p-3 card-img-top" src="${data.cover}" alt="${data.artist.name}"></a>
