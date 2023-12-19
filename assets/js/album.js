@@ -1,6 +1,6 @@
-const urlAlbum = 'https://striveschool-api.herokuapp.com/api/deezer/album/'
+const urlAlbum = 'https://striveschool-api.herokuapp.com/api/deezer/album/';
 
-const urlTrack = 'https://striveschool-api.herokuapp.com/api/deezer/track/'
+const urlTrack = 'https://striveschool-api.herokuapp.com/api/deezer/track/';
 
 window.onload = () => {
     const getData = new URLSearchParams(location.search);
@@ -44,14 +44,14 @@ function populateAlbumBanner(data) {
     let albumTime = document.getElementById('albumTime');
     let albumGradient = document.getElementById('albumGradient');
 
-    albumImage.innerHTML = `<img class="shadow" src="${data.cover_medium}" alt="">`;
+    albumImage.innerHTML = `<img class="shadow" src="${data.cover_medium}" alt="" style="width: 180px; height: 180px;">`;
     albumTitle.innerHTML = `${data.title}`;
-    artistImage.innerHTML = `<a href="artist-page.html?id=${data.artist.id}"><img class="rounded-circle" src="${data.artist.picture_small}" alt=""></a>`;
+    artistImage.innerHTML = `<a href="artist-page.html?id=${data.artist.id}"><img class="rounded-circle" src="${data.artist.picture_small}" alt="" style="width: 20px; height: 20px;"></a>`;
     artistName.innerHTML = `<a href="artist-page.html?id=${data.artist.id}">${data.artist.name}</a>`;
     albumYear.innerHTML = `${data.release_date}`;
     tracksNum.innerHTML = `${data.nb_tracks}`;
     albumTime.innerHTML = `${data.duration}`;
-    albumGradient.style.backgroundImage = `url(${data.cover_xl})`
+    albumGradient.style.backgroundImage = 'url(' + data.cover_xl + ')';
 
 }
      
@@ -67,21 +67,21 @@ function populateAlbumTracklist(el) {
 
         <div class="row d-flex align-items-center fw-bold" id="tracciaPointer" onclick="populatePlayer(${element.id})">
 
-        <div class="col-1">
-        <small class="text-secondary" id="trackNum">${i}</small>
+        <div class="col-1 text-end">
+        <small class="text-light" id="trackNum">${i}</small>
     </div>
     <div class="col-6">
         <small id="trackTitle">${element.title}</small>
         <br>
 
-        <small style="font-size:12px;" class="fw-bold text-secondary" id="trackArtist">${element.artist.name}</small>
+        <small style="font-size:12px;" class="fw-bold text-light" id="trackArtist">${element.artist.name}</small>
 
     </div>
-    <div class="col-1">
-        <small class="text-secondary" id="trackReprod">${element.id}</small>
+    <div class="col-3 ms-3">
+        <small class="text-light" id="trackReprod">${element.id}</small>
     </div>
-    <div class="col-1 offset-3">
-        <small class="text-secondary" id="trackTime">${element.duration}
+    <div class="col-1">
+        <small class="text-light" id="trackTime">${element.duration}
         </small>
     </div>
         </div>
@@ -117,7 +117,4 @@ function populatePlayer (element) {
     })
 
     console.log(element)
-    
-
-   
 }
