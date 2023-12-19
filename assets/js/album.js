@@ -46,8 +46,8 @@ function populateAlbumBanner(data) {
 
     albumImage.innerHTML = `<img class="shadow" src="${data.cover_medium}" alt="">`;
     albumTitle.innerHTML = `${data.title}`;
-    artistImage.innerHTML = `<img class="rounded-circle" src="${data.artist.picture_small}" alt="">`;
-    artistName.innerHTML = `${data.artist.name}`;
+    artistImage.innerHTML = `<a href="artist-page.html?id=${data.artist.id}"><img class="rounded-circle" src="${data.artist.picture_small}" alt=""></a>`;
+    artistName.innerHTML = `<a href="artist-page.html?id=${data.artist.id}">${data.artist.name}</a>`;
     albumYear.innerHTML = `${data.release_date}`;
     tracksNum.innerHTML = `${data.nb_tracks}`;
     albumTime.innerHTML = `${data.duration}`;
@@ -63,14 +63,18 @@ function populateAlbumTracklist(el) {
         let trackRow = document.getElementById('trackRow');
         myRow.innerHTML = `
         
+
         <div class="row d-flex align-items-center fw-bold" id="tracciaPointer" onclick="populatePlayer(${element.id})">
+
         <div class="col-1">
         <small class="text-secondary" id="trackNum">${i}</small>
     </div>
     <div class="col-6">
         <small id="trackTitle">${element.title}</small>
         <br>
-        <small class="text-secondary" style="font-size:12px" id="trackArtist">${element.artist.name}</small>
+
+        <small style="font-size:12px;" class="fw-bold text-secondary" id="trackArtist">${element.artist.name}</small>
+
     </div>
     <div class="col-1">
         <small class="text-secondary" id="trackReprod">${element.id}</small>
@@ -116,68 +120,3 @@ function populatePlayer (element) {
 
    
 }
-
-
-
-
-
-
-
-// <div id="trackRow" class="row">
-
-// <div class="col-1">
-//     <small id="trackNum">1</small>
-// </div>
-// <div class="col-6">
-//     <small id="trackTitle">kkjdjahdkajdhsdf</small>
-//     <br>
-//     <small id="trackArtist">affwfwf</small>
-// </div>
-// <div class="col-1">
-//     <small id="trackReprod">3225252</small>
-// </div>
-// <div class="col-1 offset-3">
-//     <small id="trackTime">
-//         1:24
-//     </small>
-// </div>
-
-// </div>
-
-
-
-// <div id="albumImage" class="col-3"></div>
-// <div id="albumBanner" class="col-9">
-//     <small>ALBUM</small>
-//     <h1 id="albumTitle"></h1>
-//    <div class="d-flex">
-//         <div class="rounded-circle" id="artistImage"></div>
-//         <small id="artistName"></small>
-//         <small id="albumYear"></small>
-//         <small id="tracksNum"></small>
-//         <small id="albumTime" class="text-secondary"></small>
-//    </div>
-// </div>
-
-
-
-// <div class="row">
-
-// <div class="col-1">
-//     <small>1</small>
-// </div>
-// <div class="col-6">
-//     <small>kkjdjahdkajdhsdf</small>
-//     <br>
-//     <small>affwfwf</small>
-// </div>
-// <div class="col-1">
-//     <small>3225252</small>
-// </div>
-// <div class="col-1 offset-3">
-//     <small>
-//         1:24
-//     </small>
-// </div>
-
-// </div>
