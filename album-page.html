@@ -167,19 +167,19 @@
             <div class="row" style="height: 36vh;">
 
 
-                <div id="albumImage" class="col-3 me-3"></div>
-                <div id="albumBanner" class="col-8 text-light">
-                    <small>ALBUM</small>
+                <div id="albumImage" class="col-12 col-sm-3 me-3"></div>
+                <div id="albumBanner" class="col-12 col-sm-8 text-light">
+                    <small class="d-none d-sm-block">ALBUM</small>
                     <h1 id="albumTitle"></h1>
                     <div class="d-flex align-items-center gap-1">
-                        <a href="#"><div id="artistImage"></div></a>
+                        <a class="d-none d-sm-block" href="#"><div id="artistImage"></div></a>
                         <a href="#"><small id="artistName"></small></a>
-                        <small class="mx-1">•</small>
-                        <small id="albumYear"></small>
-                        <small class="mx-1">•</small>
-                        <small id="tracksNum"></small>
-                        <small class="mx-1">•</small>
-                        <small id="albumTime" class=""></small>
+                        <small class="d-none d-sm-block mx-1">•</small>
+                        <small class="d-none d-sm-block" id="albumYear"></small>
+                        <small class="d-none d-sm-block mx-1">•</small>
+                        <small class="d-none d-sm-block" id="tracksNum"></small>
+                        <small class="d-none d-sm-block mx-1">•</small>
+                        <small class="d-none d-sm-block" id="albumTime"></small>
                     </div>
                 </div>
 
@@ -260,51 +260,71 @@
 
 
 
-    <footer>
-
-        <div class="player row-fluid d-flex justify-content-between text-center">
-
-            <div class="col-3 text-secondary align-items-center fs-3 d-flex" id="dinamico">
-
-                <img id="playerImage"/>
-                <div id="playerDetails">
-                    <div id="playerTitle"></div>
-                    <div id="playerArtist"></div>
-                </div>
-                <i class="bi bi-heart fs-4"></i>
-
-            </div>
-
-            <div class="playBarBox col-6 text-white fs-3 pt-2">
-
-                <i class="bi mx-2 bi-shuffle text-success"></i>
-                <i class="bi mx-2 bi-skip-backward-fill"></i>
-                <i class="bi mx-2 bi-play-circle-fill fs-2"></i>
-                <i class="bi mx-2 bi-skip-forward-fill"></i>
-                <i class="bi mx-2 bi-repeat text-success"></i>
+</div>
 
 
-                <div class="d-flex justify-content-center">
-                    <div class="playerTime mx-2 text-secondary">0:00</div>
-                    <div class="playBar mt-2"></div>
-                    <div class="playerTime mx-2 text-secondary">0:00</div>
+<div class="player">
+    <div class="row d-flex justify-content-between text-center">
+      <div
+        class="d-flex col-8 col-sm-3 text-secondary align-items-center fs-3 my-1"
+        id="dinamico"
+      >
+        <img id="playerImage" />
+        <div id="playerDetails">
+          <div id="playerTitle"></div>
+          <div id="playerArtist"></div>
+        </div>
+        <i class="ms-3 bi bi-heart fs-4"></i>
+      </div>
 
-                </div>
+      <div class="playBarBox col-4 col-sm-6 text-white fs-3 pt-2">
+        <i class="bi mx-2 bi-shuffle text-success"></i>
+        <i class="bi mx-2 bi-skip-backward-fill"></i>
+        <i class="bi mx-2 bi-play-circle-fill fs-2"></i>
+        <i class="bi mx-2 bi-skip-forward-fill"></i>
+        <i class="bi mx-2 bi-repeat text-success"></i>
 
+        <div class="d-flex justify-content-center">
+          <div class="playerTime mx-2 text-secondary">0:00</div>
+          <div class="playBar mt-2"></div>
+          <div class="playerTime mx-2 text-secondary">0:00</div>
+        </div>
+      </div>
 
-            </div>
+      <div
+        class="volumeBox d-none col-sm-3 text-secondary fs-4 d-sm-flex align-items-center justify-content-end pe-3"
+      >
+        <i class="bi d-none d-sm-block bi-list"></i>
+        <i class="bi d-none d-sm-block bi-pip"></i>
+        <i class="bi d-none d-sm-block bi-volume-up"></i>
+        <div class="volumeBar d-none d-sm-block"></div>
+        <i class="bi d-none d-sm-block bi-arrows-fullscreen"></i>
+      </div>
+    </div>
 
-            <div class="volumeBox col-3 text-secondary fs-4 d-flex align-items-center justify-content-end pe-3">
-                <i class="bi bi-list"></i>
-                <i class="bi bi-pip"></i>
-                <i class="bi bi-volume-up"></i>
-                <div class="volumeBar"></div>
-                <i class="bi bi-arrows-fullscreen"></i>
-            </div>
-
+    <div class="row">
+      <div
+        id="mobileMenu"
+        class="col-12 d-flex justify-content-evenly d-sm-none"
+      >
+        <div class="d-flex flex-column">
+          <a href="index.html" class="text-secondary">
+            <i class="bi bi-house-door-fill fs-3"></i> </a
+          ><small class="fs-6 text-secondary ms-1 fw-bold">Home</small>
         </div>
 
-    </footer>
+        <div class="d-flex flex-column">
+          <i class="bi text-secondary bi-search fs-3"></i>
+          <small class="fs-6 text-secondary ms-1 fw-bold">Cerca</small>
+        </div>
+
+        <div class="d-flex flex-column">
+          <i class="bi text-secondary bi-collection fs-3"></i>
+          <small class="fs-6 text-secondary ms-1 fw-bold">Libreria</small>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
