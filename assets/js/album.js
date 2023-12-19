@@ -48,8 +48,8 @@ function populateAlbumBanner(data) {
     albumYear.innerHTML = `${data.release_date}`;
     tracksNum.innerHTML = `${data.nb_tracks}`;
     albumTime.innerHTML = `${data.duration}`;
-
 }
+     
 
 function populateAlbumTracklist(el) {
     let i = 1;
@@ -66,7 +66,7 @@ function populateAlbumTracklist(el) {
     <div class="col-6">
         <small id="trackTitle">${element.title}</small>
         <br>
-        <small id="trackArtist">${element.artist.name}</small>
+        <small id="trackArtist" style="font-size: 10px">${element.artist.name}</small>
     </div>
     <div class="col-1">
         <small id="trackReprod">${element.id}</small>
@@ -84,6 +84,7 @@ function populateAlbumTracklist(el) {
        i++
     })
 }
+
 
 
 
