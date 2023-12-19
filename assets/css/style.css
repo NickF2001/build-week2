@@ -60,18 +60,15 @@ body{
 
 }
 
-#mainDiv {
-    height: 100vh;
-}
 
-#main{
+#main, #totalContainer{
   overflow-y: scroll;
     overflow-x: hidden;
     max-height: 100vh;
     position: relative;
 }
-#main::-webkit-scrollbar, #trackRow::-webkit-scrollbar {
-        width: 20px;
+#main::-webkit-scrollbar, #trackRow::-webkit-scrollbar, #totalContainer::-webkit-scrollbar {
+        width: 0px;
 }
 
 a {
@@ -94,18 +91,9 @@ a {
     cursor: pointer;
 }
 
-#artstiBanner {
-    z-index: 2;
 
-}
-#bannerArtist {
-    height: 30vh;
-    object-position: center;
-    background: no-repeat;
-}
-
-.dinamico{
-
+#hiddenOffcanvas{
+    cursor: pointer;
 }
 
 .player{
@@ -115,10 +103,6 @@ a {
     bottom: 0;
     background-color: rgb(29, 29, 29);
     z-index: 2;
-}
-
-.playBarBox{
-
 }
 
 .playerTime {
@@ -131,10 +115,6 @@ a {
     background-color: white;
 }
 
-.volumeBox{
-
-}
-
 .volumeBox i{
     margin: 0 8px;
 }
@@ -144,6 +124,7 @@ a {
     width: 90px;
     background-color: white;
 }
+
 
 .trackBox {
 
@@ -208,12 +189,37 @@ a {
         max-height:30vh;
     }
 
+
     .player{
         position: sticky;
         bottom: 0;
     }
+}
 
-    .player i {
-        display: no;
-    }
+
+
+#artistRow {
+    /* opacity: 0.9; */
+    background: rgb(0,0,0);
+background: linear-gradient(0deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.732) 100%);
+}
+
+#totalContainer {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bannerArtist {
+    height: 35vh;
+}
+
+.top5Images {
+    width: 40px;
+    height: 40px;
+}
+
+#albumGradient {
+    background-size: cover;
+    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
 }

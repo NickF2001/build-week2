@@ -42,6 +42,7 @@ function populateAlbumBanner(data) {
     let albumYear = document.getElementById('albumYear');
     let tracksNum = document.getElementById('tracksNum');
     let albumTime = document.getElementById('albumTime');
+    let albumGradient = document.getElementById('albumGradient');
 
     albumImage.innerHTML = `<img class="shadow" src="${data.cover_medium}" alt="">`;
     albumTitle.innerHTML = `${data.title}`;
@@ -50,6 +51,7 @@ function populateAlbumBanner(data) {
     albumYear.innerHTML = `${data.release_date}`;
     tracksNum.innerHTML = `${data.nb_tracks}`;
     albumTime.innerHTML = `${data.duration}`;
+    albumGradient.style.backgroundImage = `url(${data.cover_xl})`
 
 }
 
