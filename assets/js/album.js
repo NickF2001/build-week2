@@ -1,6 +1,6 @@
-const urlAlbum = 'https://striveschool-api.herokuapp.com/api/deezer/album/'
+const urlAlbum = 'https://striveschool-api.herokuapp.com/api/deezer/album/';
 
-const urlTrack = 'https://striveschool-api.herokuapp.com/api/deezer/track/'
+const urlTrack = 'https://striveschool-api.herokuapp.com/api/deezer/track/';
 
 window.onload = () => {
     const getData = new URLSearchParams(location.search);
@@ -116,7 +116,4 @@ function populatePlayer (element) {
     })
 
     console.log(element)
-    
-
-   
 }
