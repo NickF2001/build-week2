@@ -12,7 +12,7 @@ window.onload = () => {
         console.log(id)
         let body=document.querySelector('.main')
         let vuoto = document.createElement('div')
-        vuoto.innerHTML= `<h2 class="text-white">Non fare il furbo passa dalla <a href="./index.html">HOME</a></h2>`
+        vuoto.innerHTML= `<h2 class="text-center text-white">Non fare il furbo passa dalla <a href="./index.html" class="text-decoration-underline">HOME</a></h2>`
         vuoto.style.width= "100vw"
         vuoto.style.height="100vh"
         vuoto.style.backgroundColor= "black"
