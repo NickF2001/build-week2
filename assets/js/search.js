@@ -94,9 +94,11 @@ function fetchData(element) {
          <div class="col-4">
            <img class="img-fluid" src="${element.album.cover_medium}" class="card-img-top" alt="${element.artist.name}">
          </div>
-         <div class="col-6">
-           <div class="card-body h-100 d-flex align-items-center">
-             <h5 class="card-title text-light" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${element.title}</h5>
+         <div class="col">
+           <div class="card-body h-100 w-100 d-flex flex-column justify-content-center gap-1">
+              <h5 class="card-title text-light">${element.title}</h5>
+              <a href="artist-page.html?id=${element.artist.id}"><p class="card-text">${element.artist.name}</p></a>
+              <a href="album-page.html?id=${element.album.id}"><small class="card-text"><i>${element.album.title}</i></small></a>
            </div>
          </div>
      </div>

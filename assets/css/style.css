@@ -8,7 +8,7 @@ body{
 
 .main{
     display: flex;
-    justify-content: space-between; 
+    /* justify-content: space-between; */ 
     height: calc(100vh - 100px);
 }
 
@@ -197,7 +197,7 @@ background: linear-gradient(0deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.732) 100%);
 }
 
 #greyGradient {
-    background-color: rgba(62, 62, 62, 0.636);
+    background-color: rgba(62, 62, 62, 0.25);
 }
 
 #mainSearch {
