@@ -15,8 +15,10 @@ window.onload = () => {
         vuoto.innerHTML= `<h2 class="text-center text-white">Non fare il furbo passa dalla <a href="./index.html" class="text-decoration-underline">HOME</a></h2>`
         vuoto.style.width= "100vw"
         vuoto.style.height="100vh"
-        vuoto.style.backgroundColor= "black"
+        vuoto.style.backgroundColor= "rgb(0 0 0 / 80%)"
         vuoto.style.zIndex="999"
+        vuoto.style.position = 'absolute'
+        vuoto.style.paddingTop = '45vh'
         body.appendChild(vuoto)
     } else{
 
