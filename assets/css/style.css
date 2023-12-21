@@ -197,7 +197,8 @@ background: linear-gradient(0deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.732) 100%);
 }
 
 #greyGradient {
-    background-color: rgba(62, 62, 62, 0.25);
+    /* background-color: rgba(62, 62, 62, 0.25);  */
+    background: linear-gradient(0deg, rgba(62, 62, 62, 0.25) 65%, rgba(0, 0, 0, 0) 100%);
 }
 
 #mainSearch {
